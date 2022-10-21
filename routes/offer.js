@@ -7,8 +7,8 @@ const cloudinary = require("cloudinary").v2; // On n'oublie pas le `.v2` à la f
 const router = express.Router();
 
 const isAuthenticated = require("../middleware/isAuthenticated");
-const Offer = require("../models/offer");
-const { route } = require("./user");
+//const Offer = require("../models/offer");
+const Offer = require("../models/Offer");
 const convertToBase64 = (file) => {
   return `data:${file.mimetype};base64,${file.data.toString("base64")}`;
 };
