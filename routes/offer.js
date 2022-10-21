@@ -8,14 +8,7 @@ const router = express.Router();
 
 const isAuthenticated = require("../middleware/isAuthenticated");
 
-console.log("TESSST");
-console.log("TESSST");
-console.log("TESSST");
-console.log("TESSST");
 const Offer = require("../models/Offer");
-console.log("TESSST");
-
-console.log("TESSST");
 
 const convertToBase64 = (file) => {
   return `data:${file.mimetype};base64,${file.data.toString("base64")}`;
@@ -58,7 +51,7 @@ router.post(
       }
 
       //
-      if (req.files?.picture) {
+      if (req.files?.product_image) {
         // On envoie une à Cloudinary un buffer converti en base64
         const result = await cloudinary.uploader.upload(
           convertToBase64(req.files.product_image),
@@ -113,7 +106,7 @@ router.put("/offer/update", isAuthenticated, fileUpload(), async (req, res) => {
       }
     }
 
-    if (req.files?.picture) {
+    if (req.files?.product_image) {
       // On envoie une à Cloudinary un buffer converti en base64
       const result = await cloudinary.uploader.upload(
         convertToBase64(req.files.product_image),
