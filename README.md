@@ -1,4 +1,4 @@
-﻿# vinted-react : clone du site vinted pour la partie backend
+﻿# vinted-react : clone du site vinted partie backend (formation au REACTEUR)
  
  Principales technos utilisées :
  
